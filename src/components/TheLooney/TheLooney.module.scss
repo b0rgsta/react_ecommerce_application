@@ -1,0 +1,30 @@
+.TheLooney {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  margin-left: 50px;
+}
+
+.pennywise {
+  height: 100%;
+  width: 100%;
+}
+
+.lollipop {
+  position: absolute;
+  top: 48%;
+  left: 25%;
+  width: 25%;
+  &:last-of-type{
+    left: 51%;
+  }
+}
+
+@keyframes lollipop {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

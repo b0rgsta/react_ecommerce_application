@@ -1,0 +1,19 @@
+.main {
+  min-width: 49vw;
+}
+
+.Button {
+  margin-right: 10px;
+}
+
+.button {
+  margin-right: 5px;
+}
+
+.purchaseButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+  margin: auto;
+}
