@@ -1,11 +1,10 @@
 import './App.module.scss';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import ProductPage from './containers/ProductPage';
 import {createTheme, ThemeProvider} from '@mui/material';
 import {purple} from '@mui/material/colors';
-import styles from './App.module.scss'
-import ProductCard from './components/ProductCard';
+import styles from './App.module.scss';
+import Home from './containers/Home';
 
 const theme = createTheme({
   palette: {
@@ -24,8 +23,7 @@ function App() {
     <div className={styles.App}>
       <ThemeProvider theme={theme}>
         <Header/>
-        <ProductCard/>
-        <ProductPage/>
+        <Home/>
         <Footer/>
 
       </ThemeProvider>
