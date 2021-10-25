@@ -1,14 +1,20 @@
-import {Button, Card, CardActions, CardContent, Typography} from '@mui/material';
+import {Card, CardContent, CardMedia, Typography} from '@mui/material';
 
-const ProductCard = () => {
+const ProductCard = ({product}) => {
+
   return (
-    <Card sx={{maxWidth: 275}}>
+    <Card sx={{minWidth: 275}}>
+      <Typography variant={'h6'}>{product.name}</Typography>
+      <CardMedia
+        component="img"
+        height="140"
+        image={product.image}
+        alt={product.name}
+      />
       <CardContent>
-        <Typography variant={'h6'}>Like me pls</Typography>
-        <p>These yummy lollies are...</p>
+        <Typography variant={'h6'}>from ${product.variations[0].price}</Typography>
+        <p>{product.description.slice(0, 90)}...</p>
       </CardContent>
-      <CardActions>
-      </CardActions>
     </Card>
   );
 };

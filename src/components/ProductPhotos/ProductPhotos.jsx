@@ -1,12 +1,11 @@
-import lollies from "../../assets/images/lollies.jpeg"
-import styles from "./ProductPhotos.module.scss"
+import styles from './ProductPhotos.module.scss';
 
-const ProductPhotos = () => {
-  return(
+const ProductPhotos = ({image}) => {
+  return (
     <div>
-      <img className={styles.lollies} src={lollies} alt=""/>
+      <img className={styles.lollies} src={image} alt=""/>
     </div>
-  )
-}
+  );
+};
 
-export default ProductPhotos
+export default ProductPhotos;
