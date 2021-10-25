@@ -1,6 +1,8 @@
 @import "../../styles/colors";
 
 .footer {
+  position: fixed;
+  bottom: 0;
   height: 5vh;
   width: 100vw;
   margin-top: 80px;
