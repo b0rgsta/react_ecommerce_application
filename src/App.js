@@ -53,8 +53,9 @@ function App() {
               <Route path="*" exact component={PageNotFound}/>
             </Switch>
           </ProductContext.Provider>
-          <Footer/>
+
         </ThemeProvider>
+        <Footer/>
       </div>
     </Router>
   );
