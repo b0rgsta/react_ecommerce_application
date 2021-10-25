@@ -4,6 +4,7 @@ import ProductDescription from '../../components/ProductDescription';
 import {useHistory, useParams} from 'react-router-dom';
 import {useContext} from 'react';
 import {ProductContext} from '../../App';
+import styles from "./Product.module.scss"
 
 const Product = () => {
 
@@ -22,7 +23,7 @@ const Product = () => {
       { //if products not yet loaded from server, show ...Loading message
         product ?
         <>
-            <button onClick={() => {history.push('/');}}>Go Back</button>
+            <button className={styles.GoBack} onClick={() => {history.push('/');}}>Go Back</button>
             <ProductPhotos image={product.image}/>
             <ProductInfo name={product.name} variations={product.variations}/>
             <ProductDescription/>
