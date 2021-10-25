@@ -1,0 +1,16 @@
+.descript {
+  display: block;/* or inline-block */
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 3.4em;
+}
+
+.ProductTitle {
+  position: relative;
+  left: 10px;
+}
+
+.From {
+  font-size: 14px;
+}
