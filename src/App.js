@@ -10,6 +10,8 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import PageNotFound from './containers/PageNotFound';
 import {createContext, useEffect, useState} from 'react';
 import {db} from './services/firestore';
+import Carousel from './components/Carousel';
+import {CarouselData} from './components/Carousel/Carousel';
 
 const theme = createTheme({
   palette: {
