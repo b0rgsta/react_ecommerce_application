@@ -2,17 +2,20 @@
 
 .Image {
   position: relative;
-  left: 100px;
+  top: 40px;
+  right: 60px;
   z-index: 2;
   width: 490px;
   height: 210px;
+  margin-right: 100px;
 }
 
 .Title {
-  font-size: 60px;
-  line-height: 80%;
   position: relative;
-  right: 27%;
+  bottom: 113px;
+  left: -50px;
+  font-size: 60px;
+  right: 16vw;
   color: whitesmoke;
   z-index: 3;
   -webkit-text-stroke-width: 3.5px;
