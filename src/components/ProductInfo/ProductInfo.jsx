@@ -10,6 +10,7 @@ const ProductInfo = ({name, variations}) => {
 
   // Quantity
   const [qty, setQty] = useState('');
+
   const handleChange = (event) => {
     setQty(event.target.value);
   };

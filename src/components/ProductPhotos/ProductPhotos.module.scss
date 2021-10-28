@@ -4,3 +4,22 @@
   border-radius: 12px;
   width: 30vw;
 }
+.favouriteOutline {
+  position: absolute;
+  right: 35.6vw;
+  top: 24.6vh;
+  width: 57px;
+}
+
+.Favourite {
+  position: absolute;
+  right: 36vw;
+  top: 25vh;
+  filter: invert(90%) sepia(5%) saturate(708%) hue-rotate(304deg) brightness(98%) contrast(108%);
+}
+
+.notFavourite {
+  position: absolute;
+  right: 36vw;
+  top: 25vh;
+}
