@@ -5,17 +5,22 @@ import styles from './Home.module.scss';
 import {Link} from 'react-router-dom';
 import {ProductContext} from '../../App';
 import Carousel from '../../components/Carousel';
-import {CarouselData} from '../../components/Carousel/Carousel';
 
 const Home = () => {
 
   const products = useContext(ProductContext);
 
+  const featured = products.filter((item) => {
+    return item.variations.slice(-1).pop().price > 22.99
+
+  })
+
   return (
     <>
-      <Carousel slides={ CarouselData }/>
+      <h2 className={styles.BestBuys}>Today's Best Buys</h2>
+      <Carousel slides={ featured }/>
 
-      <Grid container sx={{width: '100vw'}} spacing={2} justify="space-between" alignItems="center">
+      <Grid container sx={{width: '100vw', pb: 60}} spacing={2} justify="space-between" alignItems="center">
         {products.map((item) => {
           console.log(item);
           return (
