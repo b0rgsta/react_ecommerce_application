@@ -7,7 +7,7 @@ import {ProductContext} from '../../App';
 
 const Home = () => {
 
-  const products = useContext(ProductContext);
+  const {products} = useContext(ProductContext);
 
   return (
     <>
