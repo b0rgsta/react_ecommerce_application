@@ -7,16 +7,20 @@ import {ProductContext} from '../../App';
 import styles from './Product.module.scss';
 
 const Product = () => {
+  //used to direct go back button
+  let history = useHistory()
+  //cretes variable containing id from url
+  const {id} = useParams();
 
-  let history = useHistory();
-  let {id} = useParams();
-
+  //storing products from productcontext in a local variable
   const {products} = useContext(ProductContext);
 
+  //finds product by id used to render selected product on productPage
   const product = products.find((item) => {
     return item.id === id;
   });
 
+  //created variable
   const {setFavourite} = useContext(ProductContext);
 
   return (

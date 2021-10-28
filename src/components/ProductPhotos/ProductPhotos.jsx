@@ -1,7 +1,7 @@
 import styles from './ProductPhotos.module.scss';
 import heart from '../../assets/images/heart-active.png';
 
-//props to grab the product image, favourite status, and call function on click to update favourite status.
+//props to grab the product image, favourite status, and function to update favourite status.
 const ProductPhotos = ({image, favourite, onFavouriteButtonClicked}) => {
 
   return (

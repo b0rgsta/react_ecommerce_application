@@ -8,12 +8,6 @@ const ProductInfo = ({name, variations}) => {
   // Variation
   const [variant, setVariant] = useState(0);
 
-  // Quantity
-  const [qty, setQty] = useState('');
-
-  const handleChange = (event) => {
-    setQty(event.target.value);
-  };
 
   return (
     <div className={styles.main}>
@@ -22,8 +16,11 @@ const ProductInfo = ({name, variations}) => {
       <div>
         {variations.map((item, index) => {
           return (
+            //renders all variant options as buttons
             <Button onClick={()=>{setVariant(index)}}
+                    //when clicked saves state and update price
                     sx={{marginTop: 10, mr: 6}}
+                    //variant selection highlighted
                     variant={variant === index ? 'contained' : 'outlined'}>
               {item.name}
             </Button>
@@ -32,13 +29,9 @@ const ProductInfo = ({name, variations}) => {
       </div>
       <div>
         <FormControl sx={{marginTop: 10, width: 67}} size="small">
-          <InputLabel id="demo-simple-select-helper-label">Qty</InputLabel>
+          <InputLabel>Qty</InputLabel>
           <Select
-            labelId="demo-simple-select-helper-label"
-            id="demo-simple-select-helper"
-            value={qty}
             label="Qty"
-            onChange={handleChange}
           >
             <MenuItem value="">
               <em>None</em>

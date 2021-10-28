@@ -10,9 +10,8 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import PageNotFound from './containers/PageNotFound';
 import {createContext, useEffect, useState} from 'react';
 import {db} from './services/firestore';
-import Carousel from './components/Carousel';
-import {CarouselData} from './components/Carousel/Carousel';
 
+//defining global styling for materialUI components
 const theme = createTheme({
   palette: {
     primary: {
@@ -25,34 +24,13 @@ const theme = createTheme({
   }
 });
 
+//wrapped components below with ProductContext.Provider. provides access to Productcontext.
 export const ProductContext = createContext();
 
 function App() {
-  // Products from db
+
+  // sets and stores products from db
   const [products, setProducts] = useState([]);
-
-  //sends a new or updated product to DB
-  const setProductDB = async (product) => {
-    await db
-      .collection('products')
-      .doc(product.id)
-      .set(product)
-  }
-
-  //given an id and fav-value, locates the products index and updates the
-  //DB and product array local (for seamless user experience) with the updated favourite value.
-  const setFavourite = async (id, newValue) => {
-    const productIndex = products.findIndex((item) => {
-      return item.id === id
-    })
-
-    const updatedProductArray = [...products]
-    updatedProductArray[productIndex].favourite = newValue
-    //updates DB
-    await setProductDB(updatedProductArray[productIndex])
-    //updates Local
-    setProducts(updatedProductArray)
-  }
 
   //fetches products from DB
   const getProductsDB = async () => {
@@ -64,11 +42,33 @@ function App() {
   };
 
   useEffect(() => {
-    //runs once every time page mounts
+    //runs once when page mounts
 
     getProductsDB();
   }, []);
 
+  //sends updated product to DB. called by setFavourite()
+  const setProductDB = async (product) => {
+    await db
+      .collection('products')
+      .doc(product.id)
+      .set(product);
+  };
+
+  //given an id and fav-value, locates the products index and updates the
+  //DB and product array local (for seamless user experience) with the updated favourite value.
+  const setFavourite = async (id, newValue) => {
+    const productIndex = products.findIndex((item) => {
+      return item.id === id;
+    });
+
+    const updatedProductArray = [...products];
+    updatedProductArray[productIndex].favourite = newValue;
+    //updates DB
+    await setProductDB(updatedProductArray[productIndex]);
+    //updates Local
+    setProducts(updatedProductArray);
+  };
 
   return (
     <Router>
