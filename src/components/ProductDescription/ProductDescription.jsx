@@ -1,8 +1,10 @@
-const ProductDescription = () => {
+import styles from "./ProductDescription.module.scss"
+
+const ProductDescription = ({description}) => {
   return (
     <div>
- <p>These lollies are the best. These lollies are the best. These lollies are the best. These lollies are the best. These lollies are the best. These lollies are the best. These lollies are the best. These lollies are the best. These lollies are the best. These lollies are the best. These lollies are the best. These lollies are the best. These lollies are the best. These lollies are the best. </p>
+      <p className={styles.Description}>{description}</p>
     </div>
-  )
-}
-export default ProductDescription
+  );
+};
+export default ProductDescription;

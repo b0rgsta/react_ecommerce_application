@@ -1,6 +1,39 @@
-.lollies {
+.lolliesImg {
+  position: relative;
+  bottom: 40px;
+  left: 40px;
   display: flex;
   margin: 60px auto 60px;
-
-  width: 30vw;
+  border-radius: 7px;
+  width: 26vw;
+  max-width: 300px;
+  height: 30vh;
+  margin-right: 10px;
+  object-fit: cover;
 }
+
+.favouriteOutline {
+  position: absolute;
+  right:  calc(57.6vw - 6px);
+  top: calc(32.3vh - 6px);
+  width: 57px;
+  z-index: 20;
+}
+
+.Favourite {
+  z-index: 21;
+  position: absolute;
+  right: 57.6vw;
+  top: 32.3vh;
+  width: 45px;
+  filter: invert(90%) sepia(5%) saturate(708%) hue-rotate(304deg) brightness(98%) contrast(108%);
+}
+
+.notFavourite {
+  z-index: 22;
+  position: absolute;
+  right:  calc(57.6vw - 6px);
+  top: calc(32.3vh - 6px);
+  width: 57px;
+}
+

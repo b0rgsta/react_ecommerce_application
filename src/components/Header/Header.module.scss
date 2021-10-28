@@ -1,9 +1,33 @@
 @import "../../styles/colors";
 
+.Image {
+  position: relative;
+  top: 40px;
+  right: 60px;
+  z-index: 2;
+  width: 490px;
+  height: 210px;
+  margin-right: 100px;
+}
+
+.Title {
+  position: relative;
+  bottom: 113px;
+  left: -50px;
+  font-size: 60px;
+  right: 16vw;
+  color: whitesmoke;
+  z-index: 3;
+  -webkit-text-stroke-width: 3.5px;
+  -webkit-text-stroke-color: black;
+}
+
 .header {
-display: flex;
+  z-index: -0.5;
+  display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $primary-color;
-  padding: 10px;
+  height: 130px;
+  background: repeating-linear-gradient($primary-color, $primary-color 20px, #ffffff 20px, #ffffff 25px, $primary-color, $primary-color 20px, #ffffff 20px, #ffffff 25px);
 }
+
