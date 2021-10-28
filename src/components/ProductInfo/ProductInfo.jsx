@@ -1,6 +1,6 @@
 import {Button, FormControl, InputLabel, MenuItem, Select, Typography} from '@mui/material';
 import {useState} from 'react';
-import styles from './ProductInto.module.scss';
+import styles from './ProductInfo.module.scss';
 
 
 const ProductInfo = ({name, variations}) => {
@@ -50,8 +50,8 @@ const ProductInfo = ({name, variations}) => {
         </FormControl>
       </div>
       <div className={styles.purchaseButtons}>
-        <Button sx={{my: 10}} variant={'contained'}>Add to cart</Button>
-        <Button variant={'contained'}>Buy it now</Button>
+        <Button sx={{my: 10, width: 286}} variant={'contained'}>Add to cart</Button>
+        <Button sx={{ width: 286}} variant={'contained'}>Buy it now</Button>
       </div>
     </div>
   );

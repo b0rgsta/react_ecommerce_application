@@ -25,13 +25,16 @@ const Product = () => {
         product ?
           <>
             <button className={styles.GoBack} onClick={() => {history.push('/');}}>Go Back</button>
+           <div className={styles.ProductDiv}>
             <ProductPhotos
               image={product.image}
               favourite={product.favourite ?? false}
               onFavouriteButtonClicked={() => setFavourite(id, !product.favourite)}/>
             <ProductInfo name={product.name} variations={product.variations}/>
-            <ProductDescription/>
-          </>
+           </div>
+            <ProductDescription description={product.description}/>
+
+        </>
           :
           <h1>Loading...</h1>
       }
