@@ -16,16 +16,16 @@ const Home = () => {
   })
 
   return (
-    <>
+    <div className={styles.container}>
       <h2 className={styles.BestBuys}>Today's Best Buys</h2>
       <Carousel slides={ featured }/>
 
-      <Grid container sx={{width: '100vw', pb: 60}} spacing={2} justify="space-between" alignItems="center">
+      <Grid container sx={{width: '100%', pb: 60}} spacing={2} justify="space-between" alignItems="center">
         {products.map((item) => {
           console.log(item);
           return (
 
-          <Grid key={item.id} item sm={6} md={4} lg={3} xl={2} className={styles.productGridItem}>
+          <Grid key={item.id} item sm={6} md={4} lg={3} className={styles.productGridItem}>
               <Link className={styles.Link} to={'/product/' + item.id}>
                 <ProductCard md="4" product={item}/>
               </Link>
@@ -33,7 +33,7 @@ const Home = () => {
           );
         })}
       </Grid>
-    </>
+    </div>
   );
 };
 export default Home;

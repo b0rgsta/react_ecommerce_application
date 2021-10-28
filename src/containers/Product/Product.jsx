@@ -23,7 +23,7 @@ const Product = () => {
     <div>
       { //if products not yet loaded from server, show ...Loading message
         product ?
-          <>
+          <div className={styles.container}>
             <button className={styles.GoBack} onClick={() => {history.push('/');}}>Go Back</button>
            <div className={styles.ProductDiv}>
             <ProductPhotos
@@ -34,7 +34,7 @@ const Product = () => {
            </div>
             <ProductDescription description={product.description}/>
 
-        </>
+        </div>
           :
           <h1>Loading...</h1>
       }
