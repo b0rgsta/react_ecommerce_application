@@ -10,7 +10,7 @@ const ProductPhotos = ({image, favourite, onFavouriteButtonClicked}) => {
       <img onClick={() => onFavouriteButtonClicked()}
            className={favourite ? styles.Favourite : styles.notFavourite}
            src={heart}/>
-      <img className={styles.lollies} src={image} alt="Lollies image"/>
+      <img className={styles.lolliesImg} src={image} alt="Lollies image"/>
     </div>
   );
 };
