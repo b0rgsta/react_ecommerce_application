@@ -17,10 +17,10 @@ const ProductInfo = ({name, variations}) => {
         {variations.map((item, index) => {
           return (
             //renders all variant options as buttons
-            <Button onClick={()=>{setVariant(index)}}
-                    //when clicked saves state and update price
+            <Button onClick={() => {setVariant(index);}}
+              //when clicked saves state and update price
                     sx={{marginTop: 10, mr: 6}}
-                    //variant selection highlighted
+              //variant selection highlighted
                     variant={variant === index ? 'contained' : 'outlined'}>
               {item.name}
             </Button>
@@ -51,7 +51,7 @@ const ProductInfo = ({name, variations}) => {
       </div>
       <div className={styles.purchaseButtons}>
         <Button sx={{my: 10, width: 286}} variant={'contained'}>Add to cart</Button>
-        <Button sx={{ width: 286}} variant={'contained'}>Buy it now</Button>
+        <Button sx={{width: 286}} variant={'contained'}>Buy it now</Button>
       </div>
     </div>
   );

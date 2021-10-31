@@ -1,6 +1,6 @@
-import pennywise from "../../assets/images/pennywise.png"
-import lollipop from "../../assets/images/lollipop.png"
-import styles from "./TheLooney.module.scss"
+import pennywise from '../../assets/images/pennywise.png';
+import lollipop from '../../assets/images/lollipop.png';
+import styles from './TheLooney.module.scss';
 
 
 const TheLooney = () => {
@@ -10,7 +10,7 @@ const TheLooney = () => {
       <img className={styles.lollipop} src={lollipop} alt=""/>
       <img className={styles.lollipop} src={lollipop} alt=""/>
     </div>
-  )
-}
+  );
+};
 
-export default TheLooney
+export default TheLooney;

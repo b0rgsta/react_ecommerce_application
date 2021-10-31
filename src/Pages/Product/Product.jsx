@@ -8,8 +8,8 @@ import styles from './Product.module.scss';
 
 const Product = () => {
   //used to direct go back button
-  let history = useHistory()
-  //cretes variable containing id from url
+  let history = useHistory();
+  //creates variable containing id from url
   const {id} = useParams();
 
   //storing products from productcontext in a local variable
@@ -29,16 +29,16 @@ const Product = () => {
         product ?
           <div className={styles.container}>
             <button className={styles.GoBack} onClick={() => {history.push('/');}}>Go Back</button>
-           <div className={styles.ProductDiv}>
-            <ProductPhotos
-              image={product.image}
-              favourite={product.favourite ?? false}
-              onFavouriteButtonClicked={() => setFavourite(id, !product.favourite)}/>
-            <ProductInfo name={product.name} variations={product.variations}/>
-           </div>
+            <div className={styles.ProductDiv}>
+              <ProductPhotos
+                image={product.image}
+                favourite={product.favourite ?? false}
+                onFavouriteButtonClicked={() => setFavourite(id, !product.favourite)}/>
+              <ProductInfo name={product.name} variations={product.variations}/>
+            </div>
             <ProductDescription description={product.description}/>
 
-        </div>
+          </div>
           :
           <h1>Loading...</h1>
       }

@@ -1,4 +1,4 @@
-import styles from "./ProductDescription.module.scss"
+import styles from './ProductDescription.module.scss';
 
 const ProductDescription = ({description}) => {
   return (

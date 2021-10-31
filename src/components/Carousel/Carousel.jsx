@@ -28,7 +28,7 @@ const Carousel = ({slides}) => {
       <p className={styles.rightArrow} onClick={prevSlide}>{'>'}</p>
       {slides.map((slide, index) => {
         return (
-          //displays only the image which has index matching currentSlide by adjusting the image opacity
+          //displays only the image which has index matching currentSlide by adjusting the image opacity with css
           <div className={index === currentSlide ? styles.slideActive : styles.slide} key={index}>
 
             {index === currentSlide && (
